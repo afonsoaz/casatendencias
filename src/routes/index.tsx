@@ -62,7 +62,7 @@ function Home() {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/70 via-ink/40 to-transparent" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/15" />
         <div className="mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-6 py-24 text-ink-foreground">
           <p className="eyebrow text-ink-foreground/80">Decoração ao domicílio · Santo Tirso</p>
           <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[1.08] md:text-6xl lg:text-7xl">
