@@ -10,13 +10,13 @@ import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
-      { title: "Serviços — Casa & Tendências" },
+      { title: "Serviços · Casa & Tendências" },
       {
         name: "description",
         content:
           "Cortinados por medida, mobiliário e iluminação, e consultoria de interiores ao domicílio. Medição, aconselhamento e instalação em Santo Tirso e arredores.",
       },
-      { property: "og:title", content: "Serviços — Casa & Tendências" },
+      { property: "og:title", content: "Serviços · Casa & Tendências" },
       {
         property: "og:description",
         content:

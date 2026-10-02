@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Casa & Tendências — Cortinados, Mobiliário e Consultoria ao Domicílio" },
+      { title: "Casa & Tendências · Cortinados, Mobiliário e Consultoria ao Domicílio" },
       {
         name: "description",
         content:
           "Cortinados por medida, mobiliário, iluminação e consultoria de interiores ao domicílio, em Santo Tirso e arredores. Medição, aconselhamento e instalação em sua casa.",
       },
-      { property: "og:title", content: "Casa & Tendências — Decoração ao Domicílio" },
+      { property: "og:title", content: "Casa & Tendências · Decoração ao Domicílio" },
       {
         property: "og:description",
         content:
@@ -184,7 +184,7 @@ function SiteFooter() {
             <span className="font-display text-lg tracking-wide">Casa & Tendências</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-foreground/70">
-            Cortinados por medida, mobiliário, iluminação e consultoria de interiores — com
+            Cortinados por medida, mobiliário, iluminação e consultoria de interiores, com
             atendimento ao domicílio, de ponta a ponta.
           </p>
         </div>
@@ -203,7 +203,7 @@ function SiteFooter() {
                 rel="noreferrer"
                 className="text-ink-foreground/80 transition-colors hover:text-primary"
               >
-                WhatsApp — {PHONE_DISPLAY}
+                WhatsApp · {PHONE_DISPLAY}
               </a>
             </li>
             <li>
@@ -213,7 +213,7 @@ function SiteFooter() {
                 rel="noreferrer"
                 className="text-ink-foreground/80 transition-colors hover:text-primary"
               >
-                Instagram — @casaetendencias
+                Instagram · @casaetendencias
               </a>
             </li>
           </ul>

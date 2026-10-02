@@ -10,13 +10,13 @@ import { INSTAGRAM_URL } from "@/lib/brand";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portefólio — Casa & Tendências" },
+      { title: "Portefólio · Casa & Tendências" },
       {
         name: "description",
         content:
           "Transformações de interiores assinadas pela Casa & Tendências: cortinados por medida, mobiliário e consultoria ao domicílio. Veja mais no Instagram @casaetendencias.",
       },
-      { property: "og:title", content: "Portefólio — Casa & Tendências" },
+      { property: "og:title", content: "Portefólio · Casa & Tendências" },
       {
         property: "og:description",
         content:
@@ -78,7 +78,7 @@ function PortfolioPage() {
             Transformações que falam <span className="italic text-primary">por si</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
-            Uma seleção de projetos realizados ao domicílio — cada um desenhado à medida da casa
+            Uma seleção de projetos realizados ao domicílio, cada um desenhado à medida da casa
             e de quem nela vive.
           </p>
         </div>
