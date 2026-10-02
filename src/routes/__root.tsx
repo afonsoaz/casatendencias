@@ -185,7 +185,7 @@ function SiteFooter() {
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-foreground/70">
             Cortinados por medida, mobiliário, iluminação e consultoria de interiores, com
-            atendimento ao domicílio, de ponta a ponta.
+            atendimento ao domicílio.
           </p>
         </div>
         <div>
@@ -225,7 +225,7 @@ function SiteFooter() {
             4780-384 Santo Tirso, Portugal
           </address>
           <p className="mt-3 text-xs leading-relaxed text-ink-foreground/60">
-            Serviço focado em visitas ao domicílio e por marcação prévia.
+            Serviço por marcação prévia, nas nossas instalações ou no seu domicílio.
           </p>
         </div>
       </div>

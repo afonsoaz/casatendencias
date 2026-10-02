@@ -106,7 +106,7 @@ function Home() {
             comodidade de decidir <span className="italic">em casa</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            A Casa & Tendências não é só uma loja. É um atendimento personalizado que pode ir até à sua casa. Levamos tecidos, ideias e soluções até si, e ficamos consigo desde a primeira medição até à última cortina instalada.
+            A Casa & Tendências não é só uma loja; é um atendimento personalizado que pode ir até à sua casa. Levamos tecidos, ideias e soluções até si, e ficamos consigo desde a primeira medição até à última cortina instalada.
           </p>
         </div>
       </section>
@@ -212,7 +212,7 @@ function Home() {
             Pronto para transformar a sua casa?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Fale connosco: respondemos rapidamente e agendamos a visita ao seu domicílio, sem
+            Fale connosco: respondemos rapidamente e agendamos a visita ao seu domicílio ou à nossa loja, sem
             compromisso.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
