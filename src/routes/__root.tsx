@@ -129,7 +129,7 @@ function SiteHeader() {
             Casa <span className="text-primary">&</span> Tendências
           </span>
         </Link>
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {NAV.map((item) => (
             <Link
               key={item.to}
@@ -158,7 +158,7 @@ function SiteHeader() {
           </a>
         </div>
       </div>
-      <nav className="flex items-center justify-center gap-6 border-t border-border/60 py-3 md:hidden">
+      <nav className="flex items-center justify-center gap-6 border-t border-border/60 py-3 lg:hidden">
         {NAV.map((item) => (
           <Link
             key={item.to}
