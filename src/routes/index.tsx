@@ -31,12 +31,12 @@ const PROCESS = [
   {
     step: "01",
     title: "Marcação",
-    text: "Ligue ou envie mensagem e agendamos a visita à sua casa, no dia e hora que lhe convier.",
+    text: "Ligue ou envie mensagem e agendamos a visita na nossa loja em Santo Tirso, ou no conforto da sua casa, no dia e hora que lhe convier.",
   },
   {
     step: "02",
     title: "Visita e medição",
-    text: "Vamos ao seu domicílio medir com precisão, ouvir as suas ideias e perceber a luz e o ambiente de cada divisão.",
+    text: "Vamos ao seu domicílio medir com precisão, ouvir as suas ideias e perceber o ambiente de cada divisão. Ou então, visite-nos na nossa loja sob marcação.",
   },
   {
     step: "03",
