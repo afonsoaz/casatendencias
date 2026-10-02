@@ -8,13 +8,13 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Casa & Tendências — Cortinados, Mobiliário e Consultoria ao Domicílio" },
+      { title: "Casa & Tendências · Cortinados, Mobiliário e Consultoria ao Domicílio" },
       {
         name: "description",
         content:
           "Transformamos a sua casa com cortinados por medida, mobiliário, iluminação e consultoria de interiores. Medição e instalação ao domicílio em Santo Tirso e arredores.",
       },
-      { property: "og:title", content: "Casa & Tendências — Decoração ao Domicílio" },
+      { property: "og:title", content: "Casa & Tendências · Decoração ao Domicílio" },
       {
         property: "og:description",
         content:
@@ -46,7 +46,7 @@ const PROCESS = [
   {
     step: "04",
     title: "Instalação",
-    text: "Tratamos de tudo — da produção à instalação final, com acabamento impecável e sem preocupações.",
+    text: "Tratamos de tudo, da produção à instalação final, com acabamento impecável e sem preocupações.",
   },
 ] as const;
 
@@ -70,7 +70,7 @@ function Home() {
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-foreground/90">
             Cortinados por medida, mobiliário, iluminação e consultoria de interiores. Vamos até
-            si — medimos, aconselhamos e instalamos, tudo em sua casa.
+            si: medimos, aconselhamos e instalamos, tudo em sua casa.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -100,7 +100,7 @@ function Home() {
             comodidade de decidir <span className="italic">em casa</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Não é uma loja — é um atendimento ao domicílio. Levamos tecidos, ideias e soluções
+            Não é uma loja. É um atendimento ao domicílio. Levamos tecidos, ideias e soluções
             até si, e ficamos consigo desde a primeira medição até à última cortina instalada.
           </p>
         </div>
@@ -207,7 +207,7 @@ function Home() {
             Pronto para transformar a sua casa?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Fale connosco — respondemos rapidamente e agendamos a visita ao seu domicílio, sem
+            Fale connosco: respondemos rapidamente e agendamos a visita ao seu domicílio, sem
             compromisso.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

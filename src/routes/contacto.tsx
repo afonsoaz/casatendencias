@@ -6,13 +6,13 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — Casa & Tendências" },
+      { title: "Contacto · Casa & Tendências" },
       {
         name: "description",
         content:
           "Fale com a Casa & Tendências: ligue, envie WhatsApp ou descreva o seu projeto. Atendimento ao domicílio em Santo Tirso e arredores, por marcação prévia.",
       },
-      { property: "og:title", content: "Contacto — Casa & Tendências" },
+      { property: "og:title", content: "Contacto · Casa & Tendências" },
       {
         property: "og:description",
         content: "Ligue, envie WhatsApp ou descreva o seu projeto. Atendimento ao domicílio.",
@@ -70,7 +70,7 @@ function ContactoPage() {
         <div className="mx-auto max-w-6xl px-6 py-20 text-center md:py-24">
           <p className="eyebrow text-primary">Contacto</p>
           <h1 className="mx-auto mt-5 max-w-2xl font-display text-4xl leading-tight md:text-5xl">
-            Fale connosco — <span className="italic text-primary">estamos a um toque</span>
+            Fale connosco · <span className="italic text-primary">estamos a um toque</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
             Ligue, envie uma mensagem de WhatsApp ou descreva o seu projeto abaixo. Agendamos a
@@ -87,7 +87,7 @@ function ContactoPage() {
               href={PHONE_TEL}
               className="block border-b border-border pb-6 transition-colors hover:text-primary"
             >
-              <p className="eyebrow text-muted-foreground">Telefone — toque para ligar</p>
+              <p className="eyebrow text-muted-foreground">Telefone · toque para ligar</p>
               <p className="mt-2 font-display text-3xl">{PHONE_DISPLAY}</p>
             </a>
             <a
