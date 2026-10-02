@@ -1,24 +1,231 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import heroImg from "@/assets/hero.jpg";
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Casa & Tendências — Cortinados, Mobiliário e Consultoria ao Domicílio" },
+      {
+        name: "description",
+        content:
+          "Transformamos a sua casa com cortinados por medida, mobiliário, iluminação e consultoria de interiores. Medição e instalação ao domicílio em Santo Tirso e arredores.",
+      },
+      { property: "og:title", content: "Casa & Tendências — Decoração ao Domicílio" },
+      {
+        property: "og:description",
+        content:
+          "Cortinados por medida, mobiliário e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const PROCESS = [
+  {
+    step: "01",
+    title: "Marcação",
+    text: "Ligue ou envie mensagem e agendamos a visita à sua casa, no dia e hora que lhe convier.",
+  },
+  {
+    step: "02",
+    title: "Visita e medição",
+    text: "Vamos ao seu domicílio medir com precisão, ouvir as suas ideias e perceber a luz e o ambiente de cada divisão.",
+  },
+  {
+    step: "03",
+    title: "Proposta e materiais",
+    text: "Apresentamos uma proposta à medida, com amostras de tecidos, móveis e iluminação para escolher em casa.",
+  },
+  {
+    step: "04",
+    title: "Instalação",
+    text: "Tratamos de tudo — da produção à instalação final, com acabamento impecável e sem preocupações.",
+  },
+] as const;
+
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div>
+      {/* Hero */}
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={heroImg}
+          alt="Sala com cortinados por medida em tons quentes"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/70 via-ink/40 to-transparent" />
+        <div className="mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-6 py-24 text-ink-foreground">
+          <p className="eyebrow text-ink-foreground/80">Decoração ao domicílio · Santo Tirso</p>
+          <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[1.08] md:text-6xl lg:text-7xl">
+            A sua casa, pensada <span className="italic text-primary">ao detalhe</span>.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-foreground/90">
+            Cortinados por medida, mobiliário, iluminação e consultoria de interiores. Vamos até
+            si — medimos, aconselhamos e instalamos, tudo em sua casa.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href={PHONE_TEL}
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-3.5 text-sm tracking-widest uppercase text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Ligar {PHONE_DISPLAY}
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-md border border-ink-foreground/40 px-7 py-3.5 text-sm tracking-widest uppercase text-ink-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Statement */}
+      <section className="bg-card">
+        <div className="mx-auto max-w-3xl px-6 py-20 text-center md:py-28">
+          <p className="eyebrow text-primary">Casa & Tendências</p>
+          <h2 className="mt-6 font-display text-3xl leading-snug md:text-4xl">
+            Um serviço exclusivo, desenhado para quem valoriza o detalhe, os materiais e a
+            comodidade de decidir <span className="italic">em casa</span>.
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+            Não é uma loja — é um atendimento ao domicílio. Levamos tecidos, ideias e soluções
+            até si, e ficamos consigo desde a primeira medição até à última cortina instalada.
+          </p>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="eyebrow text-primary">Serviços</p>
+            <h2 className="mt-4 font-display text-4xl">O que fazemos por si</h2>
+          </div>
+          <Link
+            to="/servicos"
+            className="text-sm uppercase tracking-widest text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+          >
+            Ver todos os serviços
+          </Link>
+        </div>
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {SERVICES.map((service, i) => {
+            const img = [portfolio1, portfolio2, portfolio4][i];
+            return (
+              <Link
+                key={service.id}
+                to="/servicos"
+                className="group block overflow-hidden bg-card"
+              >
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={img}
+                    alt={service.label}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    width={1088}
+                    height={1360}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-2xl">{service.label}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {service.description}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="bg-ink text-ink-foreground">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <p className="eyebrow text-primary">Como trabalhamos</p>
+          <h2 className="mt-4 font-display text-4xl">Do primeiro contacto à casa transformada</h2>
+          <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            {PROCESS.map((item) => (
+              <div key={item.step} className="border-t border-ink-foreground/15 pt-6">
+                <span className="font-display text-3xl italic text-primary">{item.step}</span>
+                <h3 className="mt-4 font-display text-xl">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-foreground/70">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio teaser */}
+      <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="eyebrow text-primary">Portefólio</p>
+            <h2 className="mt-4 font-display text-4xl">Transformações recentes</h2>
+          </div>
+          <Link
+            to="/portfolio"
+            className="text-sm uppercase tracking-widest text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+          >
+            Ver portefólio completo
+          </Link>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[portfolio1, portfolio2, portfolio4].map((img, i) => (
+            <Link key={i} to="/portfolio" className="group block overflow-hidden bg-card">
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={img}
+                  alt="Projeto de decoração Casa & Tendências"
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width={1088}
+                  height={1360}
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA band */}
+      <section className="bg-card">
+        <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-24">
+          <h2 className="font-display text-3xl leading-snug md:text-4xl">
+            Pronto para transformar a sua casa?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Fale connosco — respondemos rapidamente e agendamos a visita ao seu domicílio, sem
+            compromisso.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={PHONE_TEL}
+              className="inline-flex rounded-md bg-primary px-7 py-3.5 text-sm uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              {PHONE_DISPLAY}
+            </a>
+            <Link
+              to="/contacto"
+              className="inline-flex rounded-md border border-foreground/25 px-7 py-3.5 text-sm uppercase tracking-widest transition-colors hover:border-primary hover:text-primary"
+            >
+              Pedir proposta
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

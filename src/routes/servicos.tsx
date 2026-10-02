@@ -1,0 +1,164 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio6 from "@/assets/portfolio-6.jpg";
+import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, SERVICES } from "@/lib/brand";
+
+export const Route = createFileRoute("/servicos")({
+  head: () => ({
+    meta: [
+      { title: "Serviços — Casa & Tendências" },
+      {
+        name: "description",
+        content:
+          "Cortinados por medida, mobiliário e iluminação, e consultoria de interiores ao domicílio. Medição, aconselhamento e instalação em Santo Tirso e arredores.",
+      },
+      { property: "og:title", content: "Serviços — Casa & Tendências" },
+      {
+        property: "og:description",
+        content:
+          "Cortinados por medida, mobiliário e iluminação, e consultoria de interiores ao domicílio.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: ServicosPage,
+});
+
+const DETAILS = [
+  {
+    ...SERVICES[0],
+    img: portfolio1,
+    points: [
+      "Medição precisa feita em sua casa",
+      "Tecidos e estores de qualidade premium",
+      "Confeção à medida das suas janelas",
+      "Instalação e acabamento incluídos",
+    ],
+  },
+  {
+    ...SERVICES[1],
+    img: portfolio3,
+    points: [
+      "Peças de mobiliário selecionadas",
+      "Pequeno mobiliário à medida do espaço",
+      "Iluminação geral e decorativa",
+      "Harmonização com o resto da casa",
+    ],
+  },
+  {
+    ...SERVICES[2],
+    img: portfolio5,
+    points: [
+      "Aconselhamento na sua casa",
+      "Paletas de cores e materiais",
+      "Disposição de móveis e têxteis",
+      "Um plano concreto e executável",
+    ],
+  },
+];
+
+function ServicosPage() {
+  return (
+    <div>
+      <section className="bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20 text-center md:py-24">
+          <p className="eyebrow text-primary">Serviços</p>
+          <h1 className="mx-auto mt-5 max-w-2xl font-display text-4xl leading-tight md:text-5xl">
+            Tudo o que a sua casa precisa, <span className="italic text-primary">sem sair dela</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
+            Levamos o ateliê até si: medição, aconselhamento e instalação ao domicílio, com
+            atendimento personalizado e por marcação prévia.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl space-y-24 px-6 py-20 md:py-28">
+        {DETAILS.map((item, i) => (
+          <article
+            key={item.id}
+            className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+              i % 2 === 1 ? "lg:[&>figure]:order-first" : ""
+            }`}
+          >
+            <figure className="overflow-hidden bg-card">
+              <img
+                src={item.img}
+                alt={item.label}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+                width={1088}
+                height={816}
+              />
+            </figure>
+            <div>
+              <p className="eyebrow text-primary">0{i + 1}</p>
+              <h2 className="mt-3 font-display text-3xl md:text-4xl">{item.label}</h2>
+              <p className="mt-5 leading-relaxed text-muted-foreground">{item.description}</p>
+              <ul className="mt-7 space-y-3">
+                {item.points.map((point) => (
+                  <li key={point} className="flex items-start gap-3 text-sm text-foreground">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section className="bg-ink text-ink-foreground">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-3 md:py-24">
+          {[portfolio2, portfolio4, portfolio6].map((img, i) => (
+            <figure key={i} className="overflow-hidden">
+              <img
+                src={img}
+                alt="Detalhe de projeto Casa & Tendências"
+                loading="lazy"
+                className="aspect-square w-full object-cover"
+                width={1088}
+                height={1088}
+              />
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-6 py-20 text-center md:py-24">
+        <h2 className="font-display text-3xl md:text-4xl">Vamos começar pela sua casa?</h2>
+        <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
+          Agende uma visita ao domicílio, sem compromisso. Também pode descrever o que pretende
+          através do nosso formulário.
+        </p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={PHONE_TEL}
+            className="inline-flex rounded-md bg-primary px-7 py-3.5 text-sm uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Ligar {PHONE_DISPLAY}
+          </a>
+          <Link
+            to="/contacto"
+            className="inline-flex rounded-md border border-foreground/25 px-7 py-3.5 text-sm uppercase tracking-widest transition-colors hover:border-primary hover:text-primary"
+          >
+            Pedir proposta
+          </Link>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex rounded-md border border-foreground/25 px-7 py-3.5 text-sm uppercase tracking-widest transition-colors hover:border-primary hover:text-primary"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
