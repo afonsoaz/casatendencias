@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ServicosRouteImport } from './routes/servicos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortfolioRoute = PortfolioRouteImport.update({
@@ -31,30 +37,34 @@ const ServicosRoute = ServicosRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
   '/portfolio': typeof PortfolioRoute
   '/servicos': typeof ServicosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
   '/portfolio': typeof PortfolioRoute
   '/servicos': typeof ServicosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
   '/portfolio': typeof PortfolioRoute
   '/servicos': typeof ServicosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/portfolio' | '/servicos'
+  fullPaths: '/' | '/contacto' | '/portfolio' | '/servicos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/portfolio' | '/servicos'
-  id: '__root__' | '/' | '/portfolio' | '/servicos'
+  to: '/' | '/contacto' | '/portfolio' | '/servicos'
+  id: '__root__' | '/' | '/contacto' | '/portfolio' | '/servicos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactoRoute: typeof ContactoRoute
   PortfolioRoute: typeof PortfolioRoute
   ServicosRoute: typeof ServicosRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactoRoute: ContactoRoute,
   PortfolioRoute: PortfolioRoute,
   ServicosRoute: ServicosRoute,
 }
