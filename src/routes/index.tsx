@@ -106,8 +106,7 @@ function Home() {
             comodidade de decidir <span className="italic">em casa</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Não é uma loja. É um atendimento ao domicílio. Levamos tecidos, ideias e soluções
-            até si, e ficamos consigo desde a primeira medição até à última cortina instalada.
+            A Casa & Tendências não é só uma loja. É um atendimento personalizado que pode ir até à sua casa. Levamos tecidos, ideias e soluções até si, e ficamos consigo desde a primeira medição até à última cortina instalada.
           </p>
         </div>
       </section>
