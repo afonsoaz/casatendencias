@@ -123,8 +123,8 @@ function ContactoPage() {
               </span>
               <h2 className="mt-6 font-display text-3xl">Pedido enviado</h2>
               <p className="mt-3 max-w-sm text-muted-foreground">
-                Obrigado pelo seu contacto. Vamos analisar o seu projeto e responder com a maior
-                brevidade — normalmente em menos de 24 horas.
+                Obrigado pelo seu contacto. Recebemos o seu pedido e vamos responder com a maior
+                brevidade possível.
               </p>
               <button
                 onClick={() => setStatus("idle")}
