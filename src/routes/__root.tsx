@@ -180,7 +180,7 @@ function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logoMark} alt="" className="h-10 w-10 brightness-[1.75] opacity-90" />
+            <img src={logoMark} alt="" className="h-10 w-10 rounded-md bg-white p-1" />
             <span className="font-display text-lg tracking-wide">Casa & Tendências</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-foreground/70">
