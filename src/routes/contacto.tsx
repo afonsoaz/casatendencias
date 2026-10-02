@@ -177,8 +177,8 @@ function ContactoPage() {
 
               <fieldset>
                 <legend className="eyebrow text-muted-foreground">Serviços pretendidos</legend>
-                <div className="mt-3 grid gap-3 sm:grid-cols-3">
-                  {SERVICES.map((service) => (
+                <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                {[...SERVICES, { id: "outros", label: "Outros serviços" } as const].map((service) => (
                     <label
                       key={service.id}
                       className={`flex cursor-pointer items-center gap-3 rounded-md border px-4 py-3 text-sm transition-colors ${
