@@ -68,7 +68,10 @@ function Home() {
           <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[1.08] md:text-6xl lg:text-7xl">
             <span className="block">A sua casa,</span>
             <span className="block">
-              pensada <span className="italic text-primary">ao detalhe</span>
+              pensada{" "}
+              <span className="italic text-primary-soft underline decoration-primary/70 decoration-2 underline-offset-8">
+                ao detalhe
+              </span>
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-foreground/90">
