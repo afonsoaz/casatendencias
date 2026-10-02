@@ -66,7 +66,7 @@ function Home() {
         <div className="mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-6 py-24 text-ink-foreground">
           <p className="eyebrow text-ink-foreground/80">Decoração ao domicílio · Santo Tirso</p>
           <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[1.08] md:text-6xl lg:text-7xl">
-            A sua casa,
+            A sua casa,{" "}
             pensada <span className="italic text-primary">ao detalhe</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-foreground/90">
