@@ -80,17 +80,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Casa & Tendências · Cortinados, Mobiliário e Consultoria ao Domicílio" },
+      { title: "Casa & Tendências · Cortinados, Papel de Parede e Consultoria ao Domicílio" },
       {
         name: "description",
         content:
-          "Cortinados por medida, mobiliário, iluminação e consultoria de interiores ao domicílio, em Santo Tirso e arredores. Medição, aconselhamento e instalação em sua casa.",
+          "Cortinados por medida, papel de parede e consultoria de interiores ao domicílio, em Santo Tirso e arredores. Medição, aconselhamento e instalação em sua casa.",
       },
       { property: "og:title", content: "Casa & Tendências · Decoração ao Domicílio" },
       {
         property: "og:description",
         content:
-          "Cortinados por medida, mobiliário e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
+          "Cortinados por medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -184,7 +184,7 @@ function SiteFooter() {
             <span className="font-display text-lg tracking-wide">Casa & Tendências</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-foreground/70">
-            Cortinados por medida, mobiliário, iluminação e consultoria de interiores, com
+            Cortinados por medida, papel de parede e consultoria de interiores, com
             atendimento ao domicílio.
           </p>
         </div>

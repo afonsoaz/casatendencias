@@ -42,7 +42,7 @@ const DETAILS = [
   },
   {
     ...SERVICES[1],
-    img: realProject6,
+    img: realProject2,
     points: [
       "Padrões e cores aconselhados em sua casa",
       "Amostras reais para decidir com calma",
@@ -115,7 +115,7 @@ function ServicosPage() {
 
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-3 md:py-24">
-          {[realProject2, realProject3, realProject5].map((img, i) => (
+          {[realProject6, realProject3, realProject5].map((img, i) => (
             <figure key={i} className="overflow-hidden">
               <img
                 src={img}
