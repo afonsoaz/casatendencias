@@ -117,8 +117,11 @@ function Home() {
                 alt={brand.name}
                 loading="lazy"
                 aria-hidden={i >= BRANDS.length}
-                className="mx-10 h-10 w-auto shrink-0 opacity-80 transition-opacity duration-300 hover:opacity-100 md:mx-14 md:h-12"
+                className={`mx-10 w-auto shrink-0 opacity-80 transition-opacity duration-300 hover:opacity-100 md:mx-14 ${
+                  brand.name === "Piubelle" ? "h-12 md:h-14" : "h-10 md:h-12"
+                }`}
               />
+
             ))}
           </div>
         </div>
