@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import serviceCortinados from "@/assets/service-cortinados.jpg";
-import serviceMobiliario from "@/assets/service-mobiliario.jpg";
+import servicePapelParede from "@/assets/service-papel-parede.jpg";
 import serviceConsultoria from "@/assets/service-consultoria.jpg";
 import realProject1 from "@/assets/real-project-1.jpg";
 import realProject3 from "@/assets/real-project-3.jpg";

@@ -20,16 +20,16 @@ export const SERVICES = [
       "Estofos e cortinados desenhados à medida das suas janelas, com tecidos selecionados consigo, medição precisa em casa e instalação impecável.",
   },
   {
-    id: "mobiliario",
-    label: "Mobiliário e iluminação",
+    id: "papel-parede",
+    label: "Papel de parede",
     description:
-      "Peças selecionadas e pequeno mobiliário à medida do seu espaço, complementados por soluções de iluminação que valorizam cada divisão.",
+      "Papéis de parede selecionados para cada divisão, com aconselhamento de padrões e cores, aplicação profissional e acabamento impecável.",
   },
   {
     id: "consultoria",
     label: "Consultoria de interiores",
     description:
-      "Aconselhamento personalizado na sua casa: paletas, materiais, disposições e ideias concretas para transformar cada divisão com harmonia.",
+      "Aconselhamento personalizado na sua casa: paletas, materiais, mobiliário e iluminação, com ideias concretas para transformar cada divisão com harmonia.",
   },
 ] as const;
 
