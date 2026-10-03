@@ -13,17 +13,17 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES, BRANDS } from "@/lib/
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Casa & Tendências · Cortinados, Papel de Parede e Consultoria ao Domicílio" },
+      { title: "Casa & Tendências · Cortinados, Blackouts e Toldos · Papel de Parede e Consultoria ao Domicílio" },
       {
         name: "description",
         content:
-          "Transformamos a sua casa com cortinados por medida, papel de parede e consultoria de interiores. Medição e instalação ao domicílio em Santo Tirso e arredores.",
+          "Transformamos a sua casa com cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores. Medição e instalação ao domicílio em Santo Tirso e arredores.",
       },
       { property: "og:title", content: "Casa & Tendências · Decoração ao Domicílio" },
       {
         property: "og:description",
         content:
-          "Cortinados por medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
+          "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -80,8 +80,8 @@ function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-foreground/90">
-            Cortinados por medida, papel de parede e consultoria de interiores. Vamos até
-            si: medimos, aconselhamos e instalamos, tudo em sua casa.
+            Cortinados, blackouts e toldos à medida, papel de parede e consultoria de
+            interiores. Vamos até si: medimos, aconselhamos e instalamos, tudo em sua casa.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a

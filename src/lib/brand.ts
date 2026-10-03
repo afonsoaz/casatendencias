@@ -16,7 +16,7 @@ export const SERVICES = [
     id: "cortinados",
     label: "Cortinados por medida",
     description:
-      "Estofos e cortinados desenhados à medida das suas janelas, com tecidos selecionados consigo, medição precisa em casa e instalação impecável.",
+      "Cortinados, blackouts e toldos à medida das suas janelas, com tecidos selecionados consigo, medição precisa em casa e instalação impecável.",
   },
   {
     id: "papel-parede",
