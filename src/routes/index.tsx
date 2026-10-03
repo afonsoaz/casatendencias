@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
+import serviceCortinados from "@/assets/service-cortinados.jpg";
+import serviceMobiliario from "@/assets/service-mobiliario.jpg";
+import serviceConsultoria from "@/assets/service-consultoria.jpg";
 import realProject1 from "@/assets/real-project-1.jpg";
 import realProject3 from "@/assets/real-project-3.jpg";
-import realProject4 from "@/assets/real-project-4.jpg";
 import realProject6 from "@/assets/real-project-6.jpg";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 
@@ -128,7 +130,7 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {SERVICES.map((service, i) => {
-            const img = [realProject1, realProject6, realProject4][i];
+            const img = [serviceCortinados, serviceMobiliario, serviceConsultoria][i];
             return (
               <Link
                 key={service.id}
