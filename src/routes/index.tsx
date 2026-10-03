@@ -6,6 +6,7 @@ import serviceConsultoria from "@/assets/service-consultoria.jpg";
 import realProject1 from "@/assets/real-project-1.jpg";
 import realProject3 from "@/assets/real-project-3.jpg";
 import realProject6 from "@/assets/real-project-6.jpg";
+import cristinaImg from "@/assets/cristina.jpg";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES, BRANDS } from "@/lib/brand";
 
 
@@ -234,6 +235,53 @@ function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Cristina */}
+      <section className="bg-card">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28 lg:gap-16">
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="absolute -left-4 -top-4 h-full w-full border border-primary/40"
+            />
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <img
+                src={cristinaImg}
+                alt="Cristina Estêvão, fundadora da Casa & Tendências"
+                loading="lazy"
+                className="h-full w-full object-cover"
+                width={1088}
+                height={1360}
+              />
+            </div>
+          </div>
+          <div>
+            <p className="eyebrow text-primary">Quem está por trás</p>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl">Cristina Estêvão</h2>
+            <div aria-hidden="true" className="mt-6 h-px w-16 bg-primary/60" />
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              Há mais de 20 anos que a Cristina vive a decoração de interiores. Ao longo deste
+              percurso, aconselhou inúmeras casas e negócios locais na região de Santo Tirso,
+              sempre com o mesmo cuidado: ouvir primeiro, propor depois.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Na Casa & Tendências, é ela quem o atende do primeiro contacto à instalação
+              final. É ela quem visita, mede e aconselha em sua casa, com um olhar experiente
+              e um atendimento inteiramente personalizado, pensado para o seu espaço e para a
+              sua forma de viver.
+            </p>
+            <p className="mt-6 font-display text-xl italic text-foreground">
+              "Cada casa tem uma história. O meu trabalho é ajudar a contá-la."
+            </p>
+            <Link
+              to="/contacto"
+              className="mt-8 inline-flex rounded-md border border-foreground/25 px-7 py-3.5 text-sm uppercase tracking-widest transition-colors hover:border-primary hover:text-primary"
+            >
+              Falar com a Cristina
+            </Link>
+          </div>
         </div>
       </section>
 
