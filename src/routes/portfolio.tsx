@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
+import realProject1 from "@/assets/real-project-1.jpg";
+import realProject2 from "@/assets/real-project-2.jpg";
+import realProject3 from "@/assets/real-project-3.jpg";
+import realProject4 from "@/assets/real-project-4.jpg";
+import realProject5 from "@/assets/real-project-5.jpg";
+import realProject6 from "@/assets/real-project-6.jpg";
 import { INSTAGRAM_URL } from "@/lib/brand";
 
 export const Route = createFileRoute("/portfolio")({
@@ -31,40 +31,40 @@ export const Route = createFileRoute("/portfolio")({
 
 const PROJECTS = [
   {
-    img: portfolio1,
-    title: "Quarto em tons quentes",
-    tag: "Cortinados por medida",
-    text: "Camadas de linho e voil para uma luz suave da manhã ao fim do dia.",
+    img: realProject1,
+    title: "Recanto de leitura",
+    tag: "Cortinados + Mobiliário",
+    text: "Texturas, iluminação e peças de apoio reunidas num ambiente acolhedor.",
   },
   {
-    img: portfolio2,
-    title: "Cantinho de leitura",
-    tag: "Mobiliário",
-    text: "Poltrona boucle, mesa de apoio em pedra e têxteis em terracota.",
+    img: realProject2,
+    title: "Composição dourada",
+    tag: "Iluminação + Decoração",
+    text: "Candeeiros, arte e pequenos objetos combinados numa composição equilibrada.",
   },
   {
-    img: portfolio3,
-    title: "Sala de jantar clássica",
-    tag: "Cortinados + Iluminação",
-    text: "Cortinados de linho cru e pendente de latão para um jantar à luz certa.",
+    img: realProject3,
+    title: "Quarto com personalidade",
+    tag: "Têxteis + Cortinados",
+    text: "Um tapete marcante e cortinados leves dão escala, conforto e identidade ao espaço.",
   },
   {
-    img: portfolio4,
-    title: "Seleção de materiais",
-    tag: "Consultoria",
-    text: "Paleta construída com o cliente, em casa, a partir de amostras reais.",
+    img: realProject4,
+    title: "Texturas serenas",
+    tag: "Têxteis + Mobiliário",
+    text: "Camadas suaves e tons neutros criam um quarto elegante e confortável.",
   },
   {
-    img: portfolio5,
-    title: "Nook noturno",
+    img: realProject5,
+    title: "Arte e matéria",
+    tag: "Consultoria de interiores",
+    text: "Cor, pedra e madeira articulam um percurso visual contemporâneo.",
+  },
+  {
+    img: realProject6,
+    title: "Sala de jantar harmoniosa",
     tag: "Mobiliário + Iluminação",
-    text: "Luz indireta e tons profundos para um canto de tranquilidade.",
-  },
-  {
-    img: portfolio6,
-    title: "Corredor luminoso",
-    tag: "Cortinados por medida",
-    text: "Voil de pé a pé que transforma a luz da tarde em atmosfera.",
+    text: "Madeira, metal e cerâmica equilibrados por luz quente e formas orgânicas.",
   },
 ];
 

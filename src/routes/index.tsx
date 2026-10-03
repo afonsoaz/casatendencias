@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
+import realProject1 from "@/assets/real-project-1.jpg";
+import realProject3 from "@/assets/real-project-3.jpg";
+import realProject4 from "@/assets/real-project-4.jpg";
+import realProject6 from "@/assets/real-project-6.jpg";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 
 export const Route = createFileRoute("/")({
@@ -127,7 +128,7 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {SERVICES.map((service, i) => {
-            const img = [portfolio1, portfolio2, portfolio4][i];
+            const img = [realProject1, realProject6, realProject4][i];
             return (
               <Link
                 key={service.id}
@@ -188,7 +189,7 @@ function Home() {
           </Link>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[portfolio1, portfolio2, portfolio4].map((img, i) => (
+          {[realProject1, realProject3, realProject6].map((img, i) => (
             <Link key={i} to="/portfolio" className="group block overflow-hidden bg-card">
               <div className="aspect-[4/5] overflow-hidden">
                 <img

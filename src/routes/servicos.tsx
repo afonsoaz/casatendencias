@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
+import realProject1 from "@/assets/real-project-1.jpg";
+import realProject2 from "@/assets/real-project-2.jpg";
+import realProject3 from "@/assets/real-project-3.jpg";
+import realProject4 from "@/assets/real-project-4.jpg";
+import realProject5 from "@/assets/real-project-5.jpg";
+import realProject6 from "@/assets/real-project-6.jpg";
 import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 
 export const Route = createFileRoute("/servicos")({
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/servicos")({
 const DETAILS = [
   {
     ...SERVICES[0],
-    img: portfolio1,
+    img: realProject1,
     points: [
       "Medição precisa feita em sua casa",
       "Tecidos e estores de qualidade premium",
@@ -42,7 +42,7 @@ const DETAILS = [
   },
   {
     ...SERVICES[1],
-    img: portfolio3,
+    img: realProject6,
     points: [
       "Peças de mobiliário selecionadas",
       "Pequeno mobiliário à medida do espaço",
@@ -52,7 +52,7 @@ const DETAILS = [
   },
   {
     ...SERVICES[2],
-    img: portfolio5,
+    img: realProject4,
     points: [
       "Aconselhamento na sua casa",
       "Paletas de cores e materiais",
@@ -115,7 +115,7 @@ function ServicosPage() {
 
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-3 md:py-24">
-          {[portfolio2, portfolio4, portfolio6].map((img, i) => (
+          {[realProject2, realProject3, realProject5].map((img, i) => (
             <figure key={i} className="overflow-hidden">
               <img
                 src={img}
