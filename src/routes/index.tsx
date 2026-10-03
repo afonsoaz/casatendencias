@@ -45,7 +45,7 @@ const PROCESS = [
   {
     step: "03",
     title: "Proposta e materiais",
-      text: "Apresentamos uma proposta à medida, com amostras de tecidos e papéis de parede para escolher em casa.",
+    text: "Apresentamos uma proposta à medida, com amostras de tecidos e papéis de parede para escolher em casa.",
   },
   {
     step: "04",
