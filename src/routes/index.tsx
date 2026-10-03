@@ -130,7 +130,7 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {SERVICES.map((service, i) => {
-            const img = [realProject1, realProject6, realProject4][i];
+            const img = [serviceCortinados, serviceMobiliario, serviceConsultoria][i];
             return (
               <Link
                 key={service.id}
