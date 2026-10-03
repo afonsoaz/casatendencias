@@ -14,13 +14,13 @@ export const Route = createFileRoute("/portfolio")({
       {
         name: "description",
         content:
-          "Transformações de interiores assinadas pela Casa & Tendências: cortinados por medida, mobiliário e consultoria ao domicílio. Veja mais no Instagram @casaetendencias.",
+          "Transformações de interiores assinadas pela Casa & Tendências: cortinados por medida, papel de parede e consultoria ao domicílio. Veja mais no Instagram @casaetendencias.",
       },
       { property: "og:title", content: "Portefólio · Casa & Tendências" },
       {
         property: "og:description",
         content:
-          "Transformações de interiores: cortinados por medida, mobiliário e consultoria ao domicílio.",
+          "Transformações de interiores: cortinados por medida, papel de parede e consultoria ao domicílio.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

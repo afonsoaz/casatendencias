@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import serviceCortinados from "@/assets/service-cortinados.jpg";
-import serviceMobiliario from "@/assets/service-mobiliario.jpg";
+import servicePapelParede from "@/assets/service-papel-parede.jpg";
 import serviceConsultoria from "@/assets/service-consultoria.jpg";
 import realProject1 from "@/assets/real-project-1.jpg";
 import realProject3 from "@/assets/real-project-3.jpg";
@@ -12,17 +12,17 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES, BRANDS } from "@/lib/
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Casa & Tendências · Cortinados, Mobiliário e Consultoria ao Domicílio" },
+      { title: "Casa & Tendências · Cortinados, Papel de Parede e Consultoria ao Domicílio" },
       {
         name: "description",
         content:
-          "Transformamos a sua casa com cortinados por medida, mobiliário, iluminação e consultoria de interiores. Medição e instalação ao domicílio em Santo Tirso e arredores.",
+          "Transformamos a sua casa com cortinados por medida, papel de parede e consultoria de interiores. Medição e instalação ao domicílio em Santo Tirso e arredores.",
       },
       { property: "og:title", content: "Casa & Tendências · Decoração ao Domicílio" },
       {
         property: "og:description",
         content:
-          "Cortinados por medida, mobiliário e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
+          "Cortinados por medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -45,7 +45,7 @@ const PROCESS = [
   {
     step: "03",
     title: "Proposta e materiais",
-    text: "Apresentamos uma proposta à medida, com amostras de tecidos, móveis e iluminação para escolher em casa.",
+    text: "Apresentamos uma proposta à medida, com amostras de tecidos e papéis de parede para escolher em casa.",
   },
   {
     step: "04",
@@ -79,7 +79,7 @@ function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-foreground/90">
-            Cortinados por medida, mobiliário, iluminação e consultoria de interiores. Vamos até
+            Cortinados por medida, papel de parede e consultoria de interiores. Vamos até
             si: medimos, aconselhamos e instalamos, tudo em sua casa.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -159,7 +159,7 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {SERVICES.map((service, i) => {
-            const img = [serviceCortinados, serviceMobiliario, serviceConsultoria][i];
+            const img = [serviceCortinados, servicePapelParede, serviceConsultoria][i];
             return (
               <Link
                 key={service.id}
