@@ -111,17 +111,18 @@ function Home() {
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent md:w-24" />
           <div className="brand-marquee-track items-center">
             {[...BRANDS, ...BRANDS].map((brand, i) => (
-              <img
+              <div
                 key={`${brand.name}-${i}`}
-                src={brand.logo}
-                alt={brand.name}
-                loading="lazy"
-                aria-hidden={i >= BRANDS.length}
-                className={`mx-10 w-auto shrink-0 opacity-80 transition-opacity duration-300 hover:opacity-100 md:mx-14 ${
-                  brand.name === "Piubelle" ? "h-12 md:h-14" : "h-10 md:h-12"
-                }`}
-              />
-
+                className="mx-8 flex h-14 w-36 shrink-0 items-center justify-center md:mx-10 md:h-16 md:w-44"
+              >
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  loading="lazy"
+                  aria-hidden={i >= BRANDS.length}
+                  className="h-auto max-h-full w-auto max-w-full object-contain opacity-80 transition-opacity duration-300 hover:opacity-100"
+                />
+              </div>
             ))}
           </div>
         </div>
