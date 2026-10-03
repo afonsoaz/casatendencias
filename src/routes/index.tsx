@@ -239,7 +239,7 @@ function Home() {
       </section>
 
       {/* Cristina */}
-      <section className="bg-card">
+      <section>
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28 lg:gap-16">
           <div className="relative">
             <div
