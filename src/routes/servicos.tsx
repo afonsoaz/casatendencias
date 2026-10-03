@@ -14,13 +14,13 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "Cortinados por medida, mobiliário e iluminação, e consultoria de interiores ao domicílio. Medição, aconselhamento e instalação em Santo Tirso e arredores.",
+          "Cortinados por medida, papel de parede e consultoria de interiores ao domicílio. Medição, aconselhamento e instalação em Santo Tirso e arredores.",
       },
       { property: "og:title", content: "Serviços · Casa & Tendências" },
       {
         property: "og:description",
         content:
-          "Cortinados por medida, mobiliário e iluminação, e consultoria de interiores ao domicílio.",
+          "Cortinados por medida, papel de parede e consultoria de interiores ao domicílio.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -44,10 +44,10 @@ const DETAILS = [
     ...SERVICES[1],
     img: realProject6,
     points: [
-      "Peças de mobiliário selecionadas",
-      "Pequeno mobiliário à medida do espaço",
-      "Iluminação geral e decorativa",
-      "Harmonização com o resto da casa",
+      "Padrões e cores aconselhados em sua casa",
+      "Amostras reais para decidir com calma",
+      "Aplicação profissional com acabamento impecável",
+      "Harmonização com têxteis e restante decoração",
     ],
   },
   {
