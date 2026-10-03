@@ -39,7 +39,6 @@ export const BRANDS = [
   { name: "Piubelle", logo: brandPiubelle.url },
   { name: "Yankee Candle", logo: brandYankee.url },
   { name: "Clayre & Eef", logo: brandClayre.url },
-  { name: "Bizzotto", logo: brandBizzotto.url },
 ] as const;
 
 
