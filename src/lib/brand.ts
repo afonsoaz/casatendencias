@@ -34,6 +34,13 @@ export const SERVICES = [
 ] as const;
 
 export const BRANDS = [
-  { name: "Evo", logo: import("@/assets/brand-evo.png.asset.json") },
+  { name: "Evo", logo: brandEvo.url },
+  { name: "Harlequin", logo: brandHarlequin.url },
+  { name: "Molaflex", logo: brandMolaflex.url },
+  { name: "Piubelle", logo: brandPiubelle.url },
+  { name: "Yankee Candle", logo: brandYankee.url },
+  { name: "Clayre & Eef", logo: brandClayre.url },
+  { name: "Bizzotto", logo: brandBizzotto.url },
 ] as const;
+
 
