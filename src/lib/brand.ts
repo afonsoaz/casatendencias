@@ -4,7 +4,6 @@ import brandMolaflex from "@/assets/brand-molaflex.png.asset.json";
 import brandPiubelle from "@/assets/brand-piubelle.png.asset.json";
 import brandYankee from "@/assets/brand-yankee.png.asset.json";
 import brandClayre from "@/assets/brand-clayre.png.asset.json";
-import brandBizzotto from "@/assets/brand-bizzotto.png.asset.json";
 
 export const PHONE_DISPLAY = "+351 912 042 112";
 export const PHONE_TEL = "tel:+351912042112";
