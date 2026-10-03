@@ -206,7 +206,7 @@ function ContactoPage() {
                   required
                   rows={5}
                   className={`mt-2 ${inputClass} resize-none`}
-                  placeholder="Ex.: Quero papel de parede para a sala e cortinados novos para o quarto..."
+                  placeholder="Ex.: Quero papel de parede para a sala e cortinados com blackout para o quarto..."
                 />
               </label>
 

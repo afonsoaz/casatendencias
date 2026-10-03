@@ -14,13 +14,13 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "Cortinados por medida, papel de parede e consultoria de interiores ao domicílio. Medição, aconselhamento e instalação em Santo Tirso e arredores.",
+          "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores ao domicílio. Medição, aconselhamento e instalação em Santo Tirso e arredores.",
       },
       { property: "og:title", content: "Serviços · Casa & Tendências" },
       {
         property: "og:description",
         content:
-          "Cortinados por medida, papel de parede e consultoria de interiores ao domicílio.",
+          "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores ao domicílio.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
