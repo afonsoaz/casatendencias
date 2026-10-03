@@ -23,3 +23,8 @@ export const SERVICES = [
       "Aconselhamento personalizado na sua casa: paletas, materiais, disposições e ideias concretas para transformar cada divisão com harmonia.",
   },
 ] as const;
+
+export const BRANDS = [
+  { name: "Evo", logo: import("@/assets/brand-evo.png.asset.json") },
+] as const;
+
