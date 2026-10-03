@@ -6,7 +6,8 @@ import serviceConsultoria from "@/assets/service-consultoria.jpg";
 import realProject1 from "@/assets/real-project-1.jpg";
 import realProject3 from "@/assets/real-project-3.jpg";
 import realProject6 from "@/assets/real-project-6.jpg";
-import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES, BRANDS } from "@/lib/brand";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -100,7 +101,31 @@ function Home() {
         </div>
       </section>
 
+      {/* Trusted brands marquee */}
+      <section aria-label="Marcas com quem trabalhamos" className="brand-marquee overflow-hidden border-b border-border/60 bg-background">
+        <p className="eyebrow mt-10 text-center text-muted-foreground">
+          Trabalhamos com marcas de confiança
+        </p>
+        <div className="relative mt-8 mb-10">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent md:w-24" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent md:w-24" />
+          <div className="brand-marquee-track items-center">
+            {[...BRANDS, ...BRANDS].map((brand, i) => (
+              <img
+                key={`${brand.name}-${i}`}
+                src={brand.logo}
+                alt={brand.name}
+                loading="lazy"
+                aria-hidden={i >= BRANDS.length}
+                className="mx-10 h-10 w-auto shrink-0 opacity-80 transition-opacity duration-300 hover:opacity-100 md:mx-14 md:h-12"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Statement */}
+
       <section className="bg-card">
         <div className="mx-auto max-w-3xl px-6 py-20 text-center md:py-28">
           <p className="eyebrow text-primary">Casa & Tendências</p>
