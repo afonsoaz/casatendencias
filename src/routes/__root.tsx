@@ -154,7 +154,7 @@ function SiteHeader() {
             rel="noreferrer"
             className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm tracking-wide text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            WhatsApp
+            912 042 112
           </a>
         </div>
       </div>
