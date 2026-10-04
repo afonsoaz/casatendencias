@@ -69,9 +69,7 @@ function Home() {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/15" />
         <div className="mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-6 py-24 text-ink-foreground">
-          <p className="eyebrow text-ink-foreground/80">
-            DECORAÇÃO DE INTERIORES · SANTO TIRSO
-          </p>
+          <p className="eyebrow text-ink-foreground/80">DECORAÇÃO DE INTERIORES · SANTO TIRSO</p>
           <h1 className="mt-6 max-w-2xl font-display text-5xl leading-[1.08] md:text-6xl lg:text-7xl">
             <span className="block">A sua casa,</span>
             <span className="block">
@@ -141,7 +139,7 @@ function Home() {
             comodidade de decidir em casa.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Há mais de 20 anos que levamos a decoração de requinte até si. Cortinados, blackouts e toldos à medida, papel de parede, e consultoria de interiores. Medimos, aconselhamos e instalamos, tudo em sua casa.
+            A Casa & Tendências não é só uma loja; é um atendimento personalizado que pode ir até à sua casa. Levamos tecidos, ideias e soluções até si, e ficamos consigo desde a primeira medição até à última cortina instalada.
           </p>
         </div>
       </section>
