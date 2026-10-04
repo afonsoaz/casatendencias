@@ -80,8 +80,7 @@ function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-foreground/90">
-            Cortinados, blackouts e toldos à medida, papel de parede e consultoria de
-            interiores. Vamos até si: medimos, aconselhamos e instalamos, tudo em sua casa.
+            Há mais de 20 anos, vamos até si para elevar a sua casa. Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores. Medimos, aconselhamos e instalamos, tudo em sua casa.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
