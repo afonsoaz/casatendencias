@@ -299,7 +299,7 @@ function Home() {
               href={PHONE_TEL}
               className="inline-flex rounded-md bg-primary px-7 py-3.5 text-sm uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              {PHONE_DISPLAY}
+              912 042 112
             </a>
             <Link
               to="/contacto"
