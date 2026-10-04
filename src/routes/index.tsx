@@ -87,7 +87,7 @@ function Home() {
               href={PHONE_TEL}
               className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-3.5 text-sm tracking-widest uppercase text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Ligar {PHONE_DISPLAY}
+              LIGAR 912 042 112
             </a>
             <a
               href={WHATSAPP_URL}
