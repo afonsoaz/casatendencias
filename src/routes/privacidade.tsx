@@ -79,8 +79,7 @@ function PrivacidadePage() {
         RGPD, como as cláusulas contratuais-tipo da Comissão Europeia.
       </p>
       <p>
-        Se usar o WhatsApp ou o Instagram para nos contactar, esses serviços são geridos pela Meta,
-        de acordo com as respetivas políticas de privacidade.
+        Se usar o WhatsApp ou o Instagram para nos contactar, esses serviços são geridos de acordo com as respetivas políticas de privacidade.
       </p>
 
       <h2>6. Os seus direitos</h2>
