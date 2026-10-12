@@ -17,10 +17,10 @@ export const Route = createFileRoute("/termos")({
         content: "Condições de utilização do site, marcações, propostas e resolução de litígios.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://casatendencias.lovable.app/termos" },
+      { property: "og:url", content: "https://casatendencias.com/termos" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/termos" }],
+    links: [{ rel: "canonical", href: "https://casatendencias.com/termos" }],
   }),
   component: TermosPage,
 });

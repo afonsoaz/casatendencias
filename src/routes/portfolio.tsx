@@ -24,10 +24,10 @@ export const Route = createFileRoute("/portfolio")({
           "Transformações de interiores: cortinados, blackouts e toldos à medida, papel de parede e consultoria ao domicílio.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://casatendencias.lovable.app/portfolio" },
+      { property: "og:url", content: "https://casatendencias.com/portfolio" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/portfolio" }],
+    links: [{ rel: "canonical", href: "https://casatendencias.com/portfolio" }],
   }),
   component: PortfolioPage,
 });

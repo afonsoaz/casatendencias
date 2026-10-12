@@ -27,10 +27,10 @@ export const Route = createFileRoute("/")({
           "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://casatendencias.lovable.app" },
+      { property: "og:url", content: "https://casatendencias.com" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app" }],
+    links: [{ rel: "canonical", href: "https://casatendencias.com" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "HomeAndConstructionBusiness",
           name: "Casa & Tendências",
-          url: "https://casatendencias.lovable.app",
+          url: "https://casatendencias.com",
           telephone: "+351912042112",
           email: "casa.tendencias@gmail.com",
           address: {
