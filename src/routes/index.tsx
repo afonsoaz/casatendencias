@@ -56,7 +56,6 @@ const PROCESS = [
 ] as const;
 
 function Home() {
-  const [paused, setPaused] = useState(false);
   return (
     <div>
       {/* Hero */}
