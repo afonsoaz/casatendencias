@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
+import { submitContact } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/contacto")({
   staticData: { sitemap: true },
