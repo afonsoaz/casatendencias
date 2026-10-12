@@ -1,41 +1,44 @@
 # Casa & Tendências
 
-Create a website for the home decor business Casa & Tendências.
-The website should be completely in Portuguese and have an airy but refined, very premium look that speaks to a medium-high price point and feels exclusive.
+**DISCLAIMER: I have used AI (specifically [Lovable](https://lovable.dev)) heavily to build this website**
 
-Brand & Colors:
-- Use the attached logo-full.svg for the brand mark.
-- Palette: Terracotta Rose (#C05868), Charcoal slate (#1A1A1A / #0A0A0A), and Warm cream (#FAF7F2 / #F3ECE4).
+The website of Casa & Tendências, my mother's interior decoration business in Santo Tirso,
+in the north of Portugal. She has run it for more than twenty years. The shop is currently closed
+to walk-in customers: she works by appointment, at the shop or in the client's own home,
+where she measures, advises and then comes back to install made-to-measure curtains, blackouts,
+awnings and wallpaper.
 
-Services & Positioning:
-The business delivers custom curtains, fabrics, small furniture, and interior decor advice directly to clients' homes. Staff goes to clients' homes to measure, advise, and install.
-Do not focus on a physical walk-in store; mention the address discreetly at the bottom/footer: Rua Abel Alves de Figueiredo n 170, Santo Tirso, Portugal, 4780-384, with a note that service is focused on home visits and by prior appointment.
+Given this is a bookable service with no walk-ins, the page shows the standard of the projects
+she has worked on, introduces the person who will come to the customer's house, and makes it
+easy to book the visit by phone, by WhatsApp or with a short form. It is written in European
+Portuguese.
 
-Key Actions:
-- Prominent click-to-call phone number: +351 912 042 112
-- Clear WhatsApp action (+351 912 042 112)
-- Form where prospective clients can describe what they want to do in their home, indicate their location, and select services (cortinados por medida, mobiliário e iluminação, consultoria de interiores).
-- Portfolio / gallery showcasing past transformations with reference to Instagram @casaetendencias.
+**[Visit the site](https://casatendencias.com)**
 
-This project was built with [Lovable](https://lovable.dev).
+<p align="center">
+  <img src="docs/img/desktop.jpg" width="100%" alt="The first screen on a laptop: the headline over a living room with made-to-measure curtains, and the buttons to call or send a WhatsApp">
+</p>
 
-**Live app**: https://casatendencias.lovable.app
+## What is on the site
 
-## Build with Lovable
+| Page | What it answers |
+|---|---|
+| **Início** | What it is and how it works. The headline and the two ways to get in touch, the brands she works with, the three services, the four steps from first call to installation, some recent projects, and a section on the store owner. |
+| **Serviços** | What each service includes. Curtains, blackouts and awnings; wallpaper; and interior design advice. |
+| **Portefólio** | What the work looks like. Six finished projects, and a link to the Instagram account for more. |
+| **Contacto** | How to book. Phone and WhatsApp, the address with a note that visits are by appointment, and a form. |
+| **The footer** | The privacy, terms and cookie pages, and the link to the official complaints book. |
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/54ec74fa-6274-4bbc-8725-d4d48e8e2343).
+<p align="center">
+  <img src="docs/img/phone-hero.jpg" width="24%" alt="On a phone: the headline and the buttons to call or send a WhatsApp">
+  <img src="docs/img/phone-portfolio.jpg" width="24%" alt="On a phone: the start of the portfolio">
+  <img src="docs/img/phone-owner.jpg" width="24%" alt="On a phone: the section on the store owner">
+  <img src="docs/img/phone-contacto.jpg" width="24%" alt="On a phone: the contact details and the start of the form">
+</p>
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Licence
 
-## Development
+All rights reserved. The source is published to be read, not reused, and that includes the
+photographs, the logo and the business's name.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Afonso Azevedo, 2026.
