@@ -28,6 +28,7 @@ export const Route = createFileRoute("/servicos")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/servicos" }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@graph": [{"@type":"Service",name:"Cortinados, blackouts e toldos à medida",serviceType:"Cortinados, blackouts e toldos à medida",areaServed:"Santo Tirso e arredores",provider:{"@type":"HomeAndConstructionBusiness",name:"Casa & Tendências",telephone:"+351912042112"}},{"@type":"Service",name:"Papel de parede",serviceType:"Papel de parede",areaServed:"Santo Tirso e arredores",provider:{"@type":"HomeAndConstructionBusiness",name:"Casa & Tendências",telephone:"+351912042112"}},{"@type":"Service",name:"Consultoria de interiores",serviceType:"Consultoria de interiores",areaServed:"Santo Tirso e arredores",provider:{"@type":"HomeAndConstructionBusiness",name:"Casa & Tendências",telephone:"+351912042112"}}] }) }],
   }),
   component: ServicosPage,
 });
