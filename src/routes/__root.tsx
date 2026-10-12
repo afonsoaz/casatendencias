@@ -188,7 +188,7 @@ function SiteFooter() {
           <p className="eyebrow text-ink-foreground/75">Contactos</p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
-              <a href={PHONE_TEL} className="text-lg font-display text-ink-foreground transition-colors hover:text-primary">
+              <a href={PHONE_TEL} className="text-ink-foreground transition-colors hover:text-primary">
                 {PHONE_DISPLAY}
               </a>
             </li>
