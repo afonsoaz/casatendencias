@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalPage, LEGAL } from "@/components/LegalPage";
 
 export const Route = createFileRoute("/privacidade")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Política de Privacidade · Casa & Tendências" },
@@ -16,8 +17,10 @@ export const Route = createFileRoute("/privacidade")({
         content: "Saiba que dados recolhemos, para quê e quais os seus direitos.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://casatendencias.lovable.app/privacidade" },
       { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/privacidade" }],
   }),
   component: PrivacidadePage,
 });

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalPage } from "@/components/LegalPage";
 
 export const Route = createFileRoute("/cookies")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Política de Cookies · Casa & Tendências" },
@@ -16,8 +17,10 @@ export const Route = createFileRoute("/cookies")({
         content: "Sem cookies de rastreamento nem publicidade. Apenas o estritamente necessário.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://casatendencias.lovable.app/cookies" },
       { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/cookies" }],
   }),
   component: CookiesPage,
 });

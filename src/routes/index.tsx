@@ -11,9 +11,10 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES, BRANDS } from "@/lib/
 
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Casa & Tendências · Cortinados, Blackouts e Toldos · Papel de Parede e Consultoria ao Domicílio" },
+      { title: "Casa & Tendências · Decoração de Interiores ao Domicílio em Santo Tirso" },
       {
         name: "description",
         content:
@@ -26,7 +27,31 @@ export const Route = createFileRoute("/")({
           "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://casatendencias.lovable.app" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HomeAndConstructionBusiness",
+          name: "Casa & Tendências",
+          url: "https://casatendencias.lovable.app",
+          telephone: "+351912042112",
+          email: "casa.tendencias@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Rua Abel Alves de Figueiredo n.º 170",
+            postalCode: "4780-384",
+            addressLocality: "Santo Tirso",
+            addressCountry: "PT",
+          },
+          areaServed: "Santo Tirso e arredores",
+          sameAs: ["https://www.instagram.com/casaetendencias"],
+        }),
+      },
     ],
   }),
   component: Home,
