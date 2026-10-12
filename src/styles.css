@@ -156,3 +156,12 @@
     outline-color: var(--primary-soft);
   }
 }
+
+/* Legal pages typography */
+.legal-prose { color: var(--foreground); line-height: 1.75; }
+.legal-prose h2 { font-family: var(--font-display); font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+.legal-prose p { margin-top: 0.75rem; color: var(--muted-foreground); }
+.legal-prose ul { margin-top: 0.75rem; padding-left: 1.25rem; list-style: disc; color: var(--muted-foreground); }
+.legal-prose li { margin-top: 0.35rem; }
+.legal-prose a { color: var(--primary); text-decoration: underline; text-underline-offset: 4px; }
+.legal-prose strong { color: var(--foreground); font-weight: 500; }

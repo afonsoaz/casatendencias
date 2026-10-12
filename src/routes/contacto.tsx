@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
@@ -117,8 +117,8 @@ function ContactoPage() {
         {/* Form */}
         <div className="bg-card p-8 md:p-10">
           {status === "success" ? (
-            <div className="flex min-h-[400px] flex-col items-center justify-center text-center">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 font-display text-2xl text-primary">
+            <div role="status" className="flex min-h-[400px] flex-col items-center justify-center text-center">
+              <span aria-hidden="true" className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 font-display text-2xl text-primary">
                 ✓
               </span>
               <h2 className="mt-6 font-display text-3xl">Pedido enviado</h2>
@@ -210,8 +210,24 @@ function ContactoPage() {
                 />
               </label>
 
+              <label className="flex items-start gap-3 text-sm text-muted-foreground">
+                <input
+                  type="checkbox"
+                  name="privacy"
+                  required
+                  className="mt-0.5 h-5 w-5 shrink-0 accent-[var(--primary)]"
+                />
+                <span>
+                  Li e aceito a{" "}
+                  <Link to="/privacidade" className="text-primary underline underline-offset-4">
+                    Política de Privacidade
+                  </Link>
+                  . *
+                </span>
+              </label>
+
               {status === "error" && (
-                <p className="rounded-md bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                <p role="alert" className="rounded-md bg-destructive/10 px-4 py-3 text-sm text-destructive">
                   Ocorreu um erro ao enviar. Tente novamente ou contacte-nos por telefone.
                 </p>
               )}

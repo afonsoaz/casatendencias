@@ -11,8 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as TermosRouteImport } from './routes/termos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -24,9 +27,19 @@ const ContactoRoute = ContactoRouteImport.update({
   path: '/contacto',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicosRoute = ServicosRouteImport.update({
@@ -34,39 +47,78 @@ const ServicosRoute = ServicosRouteImport.update({
   path: '/servicos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
+  '/termos': typeof TermosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
+  '/termos': typeof TermosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
+  '/termos': typeof TermosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contacto' | '/portfolio' | '/servicos'
+  fullPaths:
+    | '/'
+    | '/contacto'
+    | '/cookies'
+    | '/portfolio'
+    | '/privacidade'
+    | '/servicos'
+    | '/termos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contacto' | '/portfolio' | '/servicos'
-  id: '__root__' | '/' | '/contacto' | '/portfolio' | '/servicos'
+  to:
+    | '/'
+    | '/contacto'
+    | '/cookies'
+    | '/portfolio'
+    | '/privacidade'
+    | '/servicos'
+    | '/termos'
+  id:
+    | '__root__'
+    | '/'
+    | '/contacto'
+    | '/cookies'
+    | '/portfolio'
+    | '/privacidade'
+    | '/servicos'
+    | '/termos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
+  CookiesRoute: typeof CookiesRoute
   PortfolioRoute: typeof PortfolioRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   ServicosRoute: typeof ServicosRoute
+  TermosRoute: typeof TermosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -85,11 +137,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/portfolio': {
       id: '/portfolio'
       path: '/portfolio'
       fullPath: '/portfolio'
       preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servicos': {
@@ -99,14 +165,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
+  CookiesRoute: CookiesRoute,
   PortfolioRoute: PortfolioRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   ServicosRoute: ServicosRoute,
+  TermosRoute: TermosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
