@@ -33,8 +33,9 @@ function PrivacidadePage() {
 
       <h2>1. Responsável pelo tratamento</h2>
       <p>
-        {LEGAL.company}, NIF {LEGAL.nif}, com sede em {LEGAL.address}, que opera sob a marca
-        Casa & Tendências. Contacto: {LEGAL.email} · {LEGAL.phone}.
+        {LEGAL.company}, {LEGAL.legalForm.toLowerCase()}, NIF {LEGAL.nif}, com atividade em{" "}
+        {LEGAL.address}, que opera sob a marca Casa & Tendências. Contacto: {LEGAL.email} ·{" "}
+        {LEGAL.phone}.
       </p>
 
       <h2>2. Que dados recolhemos</h2>
