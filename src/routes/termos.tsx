@@ -27,8 +27,9 @@ function TermosPage() {
     <LegalPage eyebrow="Informação legal" title="Termos e Condições">
       <h2>1. Identificação</h2>
       <p>
-        Este site pertence a {LEGAL.company}, NIF {LEGAL.nif}, com sede em {LEGAL.address}, que
-        opera sob a marca Casa & Tendências. Contacto: {LEGAL.phone} · {LEGAL.email}.
+        Este site pertence a {LEGAL.company}, {LEGAL.legalForm.toLowerCase()}, NIF {LEGAL.nif}, com
+        atividade em {LEGAL.address}, que opera sob a marca Casa & Tendências. Contacto:{" "}
+        {LEGAL.phone} · {LEGAL.email}.
       </p>
 
       <h2>2. Utilização do site</h2>

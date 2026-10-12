@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 
 export const LEGAL = {
-  company: "[NOME LEGAL DA EMPRESA]",
-  nif: "[NIF]",
-  email: "[EMAIL PARA PRIVACIDADE]",
+  company: "Carla Cristina Pereira Estêvão",
+  legalForm: "Empresário em Nome Individual",
+  nif: "206034113",
+  email: "casa.tendencias@gmail.com",
   address: "Rua Abel Alves de Figueiredo n.º 170, 4780-384 Santo Tirso, Portugal",
   phone: "+351 912 042 112",
   updated: "12 de outubro de 2026",
