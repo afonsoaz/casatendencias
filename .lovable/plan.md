@@ -1,24 +1,33 @@
-# Fotografias reais em todo o site
+# Privacidade, termos, cookies e acessibilidade
 
-## Onde ainda há fotografias genéricas
-Só na página inicial:
-- Fotografia grande do topo (sala com cortinados)
-- Os 3 cartões de "O que fazemos por si": Cortinados/blackouts/toldos, Papel de parede, Consultoria
+## O que encontrei
+- **Rastreamento:** o site não tem Google Analytics, pixels do Facebook nem outros rastreadores. Não guarda cookies próprios.
+- **Serviços externos:** o único é o Google Fonts (tipos de letra carregados dos servidores da Google), que envia o endereço IP do visitante à Google. Na UE isto já gerou multas.
+- **Formulário:** guarda nome, telefone, email, localização, serviços e mensagem. Não há aviso de privacidade junto ao botão.
+- **Imagens:** fotografias reais da Casa & Tendências, imagens de exemplo geradas por IA (sem direitos de autor de terceiros) e logótipos de marcas parceiras (uso legítimo enquanto revendedora; convém confirmar com as marcas).
+- **Embeds:** não há vídeos, mapas ou widgets de Instagram embebidos; Instagram e WhatsApp são apenas links.
 
-As páginas Serviços, Portefólio e a secção da Cristina já usam fotografias reais e ficam como estão.
+## O que vou fazer
+1. **Página "Política de Privacidade"** (/privacidade), conforme o RGPD: quem é o responsável, que dados recolhemos no formulário, para quê, durante quanto tempo, onde ficam guardados, direitos do cliente (acesso, retificação, apagamento) e queixa à CNPD.
+2. **Página "Termos e Condições"** (/termos): uso do site, marcações e visitas ao domicílio, propostas e orçamentos, propriedade intelectual, lei portuguesa e resolução de litígios (com a referência obrigatória ao Livro de Reclamações e entidades RAL).
+3. **Página "Política de Cookies"** (/cookies): explica que o site usa apenas o estritamente necessário e não usa cookies de rastreamento.
+4. **Consentimento:** como não há rastreamento, um banner de cookies não é exigido. Coloco os tipos de letra a carregar a partir do próprio site, para não enviar dados à Google sem consentimento. Fica preparado um banner discreto (Aceitar / Recusar) que só ativa se, no futuro, forem adicionadas ferramentas de estatística.
+5. **Formulário:** caixa obrigatória "Li e aceito a Política de Privacidade" com link.
+6. **Rodapé:** links para as três páginas e para o Livro de Reclamações eletrónico.
+7. **Acessibilidade:**
+   - Verificar o contraste de todos os textos (incluindo o rosa claro "ao detalhe", textos cinzentos e textos sobre fundo escuro) e escurecer o que não cumprir o nível AA.
+   - Descrições de imagens mais específicas (cada foto do portefólio e dos serviços descreve o que mostra; logótipos com "Logótipo da marca X").
+   - Contorno visível ao navegar por teclado, link "Saltar para o conteúdo", tamanhos mínimos de toque no telemóvel, carrossel de marcas pausável e ignorado pelos leitores de ecrã na cópia duplicada.
+8. Verificar tudo no computador e telemóvel.
 
-## Passos
-1. **Rever todas as fotografias em Ficheiros** (cerca de 69, incluindo as novas de 2 e 6 de outubro), numa folha de miniaturas, avaliando nitidez, resolução, luz e o que mostram.
-2. **Escolher uma para cada lugar**, evitando repetir as que já estão no Portefólio sempre que houver alternativa:
-   - Topo: fotografia horizontal e ampla de um espaço com cortinados, com zona mais calma à esquerda para o texto.
-   - Cartão Cortinados: janela com cortinados, blackout ou toldo.
-   - Cartão Papel de parede: parede com papel de parede aplicado.
-   - Cartão Consultoria: ambiente completo e coordenado (cor, mobiliário, iluminação).
-   - Se não existir uma fotografia real adequada para um lugar, aviso e mantenho a atual até receber uma.
-3. **Melhorar com IA**: luz, brilho, balanço de brancos, endireitar perspetiva e limpar pequenas distrações, sem inventar objetos nem alterar o trabalho feito. Topo em formato horizontal (1920x1080), cartões em vertical 4:5.
-4. **Colocar no site** e verificar em computador e telemóvel que tudo carrega e que o texto do topo continua legível.
+## Preciso de confirmar consigo
+Para as páginas legais faltam dados que não posso inventar: nome legal da empresa, NIF, e email de contacto para pedidos de privacidade. Vou deixar espaços marcados e indicar-lhe quais preencher.
+
+Nota: estes textos são um modelo sólido, mas não substituem a revisão de um advogado.
 
 ## Detalhes técnicos
-- Novos ficheiros: src/assets/hero-real.jpg, service-real-cortinados.jpg, service-real-papel-parede.jpg, service-real-consultoria.jpg; atualizar imports em src/routes/index.tsx.
-- Ficheiros antigos ficam no projeto, sem uso.
-- Gravar em memória: o site usa apenas fotografias reais de trabalhos da Casa & Tendências.
+- Novas rotas: src/routes/privacidade.tsx, termos.tsx, cookies.tsx, cada uma com head() próprio.
+- Fontes: instalar @fontsource/cormorant-garamond e @fontsource/jost, remover os links do Google Fonts em __root.tsx.
+- Componente de consentimento guardado em localStorage, sem carregar scripts enquanto não houver consentimento.
+- Checkbox de consentimento no formulário (validação apenas no cliente; sem alteração à base de dados).
+- Auditoria de contraste com axe-core via Playwright.
