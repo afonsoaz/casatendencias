@@ -33,6 +33,7 @@ const DETAILS = [
   {
     ...SERVICES[0],
     img: realProject1,
+    alt: "Recanto de leitura com cortinados, cadeirão e candeeiro de pé em tons quentes",
     points: [
       "Medição precisa feita em sua casa",
       "Tecidos e estores de qualidade premium",
@@ -43,6 +44,7 @@ const DETAILS = [
   {
     ...SERVICES[1],
     img: realProject2,
+    alt: "Parede texturizada com quadros e candeeiros dourados numa composição equilibrada",
     points: [
       "Padrões e cores aconselhados em sua casa",
       "Amostras reais para decidir com calma",
@@ -53,6 +55,7 @@ const DETAILS = [
   {
     ...SERVICES[2],
     img: realProject4,
+    alt: "Quarto em tons neutros com camadas de têxteis suaves",
     points: [
       "Aconselhamento na sua casa",
       "Paletas de cores e materiais",
@@ -89,7 +92,7 @@ function ServicosPage() {
             <figure className="overflow-hidden bg-card">
               <img
                 src={item.img}
-                alt={item.label}
+                alt={item.alt}
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
                 width={1088}
@@ -115,11 +118,15 @@ function ServicosPage() {
 
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-3 md:py-24">
-          {[realProject6, realProject3, realProject5].map((img, i) => (
+          {[
+            { img: realProject6, alt: "Sala de jantar com mesa de madeira, cadeiras e iluminação quente" },
+            { img: realProject3, alt: "Quarto com tapete marcante e cortinados leves junto à janela" },
+            { img: realProject5, alt: "Ambiente contemporâneo com arte, pedra e madeira" },
+          ].map(({ img, alt }, i) => (
             <figure key={i} className="overflow-hidden">
               <img
                 src={img}
-                alt="Detalhe de projeto Casa & Tendências"
+                alt={alt}
                 loading="lazy"
                 className="aspect-square w-full object-cover"
                 width={1088}

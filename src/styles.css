@@ -128,7 +128,9 @@
   animation: marquee 38s linear infinite;
 }
 
-.brand-marquee:hover .brand-marquee-track {
+.brand-marquee:hover .brand-marquee-track,
+.brand-marquee:focus-within .brand-marquee-track,
+.brand-marquee-track.is-paused {
   animation-play-state: paused;
 }
 
