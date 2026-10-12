@@ -70,6 +70,7 @@ export const submitContact = createServerFn({ method: 'POST' })
       await sendTemplateEmail('contact-notification', 'casa.tendencias@gmail.com', {
         templateData: {
           ...input,
+          services: input.services.map((id) => SERVICE_LABELS[id] ?? id),
           submittedAt: new Date(row.created_at).toLocaleString('pt-PT', {
             dateStyle: 'long',
             timeStyle: 'short',
