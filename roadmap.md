@@ -1,7 +1,8 @@
 # Roadmap
 
 ## Open
-- (none)
+- [ ] Email new contact form requests to casa.tendencias@gmail.com
+- [ ] Replace casatendencias.lovable.app with casatendencias.com in canonical/og:url/sitemap/robots
 
 ## Waiting on user
-- [ ] Decide whether to publish the site and connect a custom domain (needed before form submissions can be emailed)
+- (none)
