@@ -28,7 +28,7 @@ const brand = {
   muted: '#6B6560',
 }
 
-function Row({ label, value }: { label: string; value?: string }) {
+function Row({ label, value }: { label: string; value?: string | undefined }) {
   if (!value) return null
   return (
     <Text style={{ margin: '0 0 10px', fontSize: '15px', lineHeight: '22px', color: brand.ink }}>
@@ -110,7 +110,7 @@ export function ContactNotificationEmail({
 
 export const template = {
   component: ContactNotificationEmail,
-  subject: (data: Record<string, any>) => `Novo pedido de contacto · ${data.name ?? 'Visitante'}`,
+  subject: (data: Record<string, any>) => `Novo pedido de contacto · ${data['name'] ?? 'Visitante'}`,
   displayName: 'Notificação de pedido de contacto',
   to: 'casa.tendencias@gmail.com',
   previewData: {
