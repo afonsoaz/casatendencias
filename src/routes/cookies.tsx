@@ -33,9 +33,7 @@ function CookiesPage() {
 
       <h2>Que cookies usamos</h2>
       <p>
-        Este site <strong>não utiliza cookies de estatística, publicidade ou redes sociais</strong>,
-        nem ferramentas como Google Analytics ou Facebook Pixel. Os tipos de letra e as imagens são
-        carregados a partir do nosso próprio site, sem envio de dados a terceiros.
+        Este site <strong>não utiliza cookies de estatística, publicidade ou redes sociais</strong>.
       </p>
       <p>
         Apenas pode ser guardada no seu navegador informação estritamente necessária ao
@@ -46,7 +44,7 @@ function CookiesPage() {
       <h2>Links externos</h2>
       <p>
         Ao clicar nos links para WhatsApp ou Instagram, sai deste site e passa a aplicar-se a
-        política de cookies da Meta.
+        política de cookies desses serviços.
       </p>
 
       <h2>Se esta política mudar</h2>
