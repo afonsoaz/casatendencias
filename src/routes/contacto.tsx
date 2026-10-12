@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
+import { submitContact } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/contacto")({
   staticData: { sitemap: true },
@@ -39,17 +39,19 @@ function ContactoPage() {
     const data = new FormData(form);
     setStatus("sending");
 
-    const { error } = await supabase.from("contact_submissions").insert({
-      name: String(data.get("name") ?? "").trim(),
-      phone: String(data.get("phone") ?? "").trim(),
-      email: String(data.get("email") ?? "").trim() || null,
-      location: String(data.get("location") ?? "").trim(),
-      services: selectedServices,
-      message: String(data.get("message") ?? "").trim(),
+    const result = await submitContact({
+      data: {
+        name: String(data.get("name") ?? ""),
+        phone: String(data.get("phone") ?? ""),
+        email: String(data.get("email") ?? "") || null,
+        location: String(data.get("location") ?? ""),
+        services: selectedServices,
+        message: String(data.get("message") ?? ""),
+      },
     });
 
-    if (error) {
-      console.error(error);
+    if (!result.ok) {
+      console.error(result.error);
       setStatus("error");
       return;
     }
