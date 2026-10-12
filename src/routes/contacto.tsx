@@ -19,10 +19,10 @@ export const Route = createFileRoute("/contacto")({
         content: "Ligue, envie WhatsApp ou descreva o seu projeto. Atendimento ao domicílio.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://casatendencias.lovable.app/contacto" },
+      { property: "og:url", content: "https://casatendencias.com/contacto" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/contacto" }],
+    links: [{ rel: "canonical", href: "https://casatendencias.com/contacto" }],
   }),
   component: ContactoPage,
 });

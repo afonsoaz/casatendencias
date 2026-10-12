@@ -17,10 +17,10 @@ export const Route = createFileRoute("/privacidade")({
         content: "Saiba que dados recolhemos, para quê e quais os seus direitos.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://casatendencias.lovable.app/privacidade" },
+      { property: "og:url", content: "https://casatendencias.com/privacidade" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/privacidade" }],
+    links: [{ rel: "canonical", href: "https://casatendencias.com/privacidade" }],
   }),
   component: PrivacidadePage,
 });

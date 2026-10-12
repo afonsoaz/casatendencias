@@ -17,10 +17,10 @@ export const Route = createFileRoute("/cookies")({
         content: "Sem cookies de rastreamento nem publicidade. Apenas o estritamente necessário.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://casatendencias.lovable.app/cookies" },
+      { property: "og:url", content: "https://casatendencias.com/cookies" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/cookies" }],
+    links: [{ rel: "canonical", href: "https://casatendencias.com/cookies" }],
   }),
   component: CookiesPage,
 });
