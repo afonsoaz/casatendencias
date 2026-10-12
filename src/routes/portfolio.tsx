@@ -32,36 +32,42 @@ export const Route = createFileRoute("/portfolio")({
 const PROJECTS = [
   {
     img: realProject1,
+    alt: "Recanto de leitura com cortinados, cadeirão e candeeiro de pé em tons quentes",
     title: "Recanto de leitura",
     tag: "Cortinados + Mobiliário",
     text: "Texturas, iluminação e peças de apoio reunidas num ambiente acolhedor.",
   },
   {
     img: realProject2,
+    alt: "Parede texturizada com quadros e candeeiros dourados numa composição equilibrada",
     title: "Composição dourada",
     tag: "Iluminação + Decoração",
     text: "Candeeiros, arte e pequenos objetos combinados numa composição equilibrada.",
   },
   {
     img: realProject3,
+    alt: "Quarto com tapete marcante e cortinados leves junto à janela",
     title: "Quarto com personalidade",
     tag: "Têxteis + Cortinados",
     text: "Um tapete marcante e cortinados leves dão escala, conforto e identidade ao espaço.",
   },
   {
     img: realProject4,
+    alt: "Quarto em tons neutros com camadas de têxteis suaves",
     title: "Texturas serenas",
     tag: "Têxteis + Mobiliário",
     text: "Camadas suaves e tons neutros criam um quarto elegante e confortável.",
   },
   {
     img: realProject5,
+    alt: "Ambiente contemporâneo com arte, pedra e madeira",
     title: "Arte e matéria",
     tag: "Consultoria de interiores",
     text: "Cor, pedra e madeira articulam um percurso visual contemporâneo.",
   },
   {
     img: realProject6,
+    alt: "Sala de jantar com mesa de madeira, cadeiras e iluminação quente",
     title: "Sala de jantar harmoniosa",
     tag: "Mobiliário + Iluminação",
     text: "Madeira, metal e cerâmica equilibrados por luz quente e formas orgânicas.",
@@ -91,7 +97,7 @@ function PortfolioPage() {
               <div className="overflow-hidden bg-card">
                 <img
                   src={project.img}
-                  alt={project.title}
+                  alt={project.alt}
                   loading="lazy"
                   className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   width={1088}
@@ -124,7 +130,7 @@ function PortfolioPage() {
           </a>
           <p className="mt-8 text-sm text-ink-foreground/60">
             Prefere falar connosco diretamente?{" "}
-            <Link to="/contacto" className="text-primary underline-offset-4 hover:underline">
+            <Link to="/contacto" className="text-primary underline underline-offset-4">
               Envie-nos o seu projeto
             </Link>
             .

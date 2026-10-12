@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import logoMark from "@/assets/logo.svg";
+import { CookieConsent } from "@/components/CookieConsent";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/brand";
 
 function NotFoundComponent() {
@@ -96,12 +97,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap",
-      },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
     ],
@@ -129,7 +124,7 @@ function SiteHeader() {
             Casa <span className="text-primary">&</span> Tendências
           </span>
         </Link>
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-8 lg:flex">
           {NAV.map((item) => (
             <Link
               key={item.to}
@@ -152,18 +147,19 @@ function SiteHeader() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm tracking-wide text-primary-foreground transition-colors hover:bg-primary/90"
+            aria-label="WhatsApp 912 042 112"
+            className="inline-flex min-h-11 items-center rounded-md bg-primary px-4 py-2 text-sm tracking-wide text-primary-foreground transition-colors hover:bg-primary/90"
           >
             912 042 112
           </a>
         </div>
       </div>
-      <nav className="flex items-center justify-center gap-6 border-t border-border/60 py-3 lg:hidden">
+      <nav aria-label="Navegação principal" className="flex items-center justify-center gap-5 border-t border-border/60 py-1 lg:hidden">
         {NAV.map((item) => (
           <Link
             key={item.to}
             to={item.to}
-            className="text-xs uppercase tracking-widest text-muted-foreground"
+            className="inline-flex min-h-11 items-center text-xs uppercase tracking-widest text-muted-foreground"
             activeProps={{ className: "text-primary" }}
           >
             {item.label}
@@ -189,7 +185,7 @@ function SiteFooter() {
           </p>
         </div>
         <div>
-          <p className="eyebrow text-ink-foreground/60">Contactos</p>
+          <p className="eyebrow text-ink-foreground/75">Contactos</p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
               <a href={PHONE_TEL} className="text-lg font-display text-ink-foreground transition-colors hover:text-primary">
@@ -219,18 +215,26 @@ function SiteFooter() {
           </ul>
         </div>
         <div>
-          <p className="eyebrow text-ink-foreground/60">Atendimento</p>
+          <p className="eyebrow text-ink-foreground/75">Atendimento</p>
           <address className="mt-4 text-sm not-italic leading-relaxed text-ink-foreground/80">
             Rua Abel Alves de Figueiredo n.º 170<br />
             4780-384 Santo Tirso, Portugal
           </address>
-          <p className="mt-3 text-xs leading-relaxed text-ink-foreground/60">
+          <p className="mt-3 text-xs leading-relaxed text-ink-foreground/75">
             Serviço por marcação prévia, nas nossas instalações ou no seu domicílio.
           </p>
         </div>
       </div>
-      <div className="border-t border-ink-foreground/10 py-5 text-center text-xs text-ink-foreground/50">
-        © {new Date().getFullYear()} Casa & Tendências. Todos os direitos reservados.
+      <div className="border-t border-ink-foreground/10 px-6 py-5 text-xs text-ink-foreground/70">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 md:flex-row">
+          <p>© {new Date().getFullYear()} Casa & Tendências. Todos os direitos reservados.</p>
+          <nav aria-label="Informação legal" className="flex flex-wrap justify-center gap-x-5 gap-y-1">
+            <Link to="/privacidade" className="inline-flex min-h-11 items-center hover:text-primary">Política de Privacidade</Link>
+            <Link to="/termos" className="inline-flex min-h-11 items-center hover:text-primary">Termos e Condições</Link>
+            <Link to="/cookies" className="inline-flex min-h-11 items-center hover:text-primary">Política de Cookies</Link>
+            <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center hover:text-primary">Livro de Reclamações</a>
+          </nav>
+        </div>
       </div>
     </footer>
   );
@@ -256,12 +260,19 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col bg-background">
+        <a
+          href="#conteudo"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+        >
+          Saltar para o conteúdo
+        </a>
         <SiteHeader />
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <main className="flex-1">
+        <main id="conteudo" tabIndex={-1} className="flex-1 focus:outline-none">
           <Outlet />
         </main>
         <SiteFooter />
+        <CookieConsent />
       </div>
     </QueryClientProvider>
   );

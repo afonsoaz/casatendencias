@@ -1,6 +1,14 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/400-italic.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource/cormorant-garamond/600.css";
+@import "@fontsource/jost/300.css";
+@import "@fontsource/jost/400.css";
+@import "@fontsource/jost/500.css";
+@import "@fontsource/jost/600.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -54,20 +62,20 @@
   --card-foreground: oklch(0.205 0 0);
   --popover: oklch(0.973 0.008 84);
   --popover-foreground: oklch(0.205 0 0);
-  --primary: oklch(0.565 0.124 14);
+  --primary: oklch(0.52 0.13 14);
   --primary-foreground: oklch(0.973 0.008 84);
   --primary-soft: oklch(0.81 0.085 16);
   --secondary: oklch(0.945 0.013 75);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.93 0.012 75);
-  --muted-foreground: oklch(0.47 0.02 60);
+  --muted-foreground: oklch(0.44 0.02 60);
   --accent: oklch(0.92 0.025 45);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.88 0.014 70);
   --input: oklch(0.88 0.014 70);
-  --ring: oklch(0.565 0.124 14);
+  --ring: oklch(0.52 0.13 14);
   --ink: oklch(0.13 0 0);
   --ink-foreground: oklch(0.973 0.008 84);
 }
@@ -120,7 +128,9 @@
   animation: marquee 38s linear infinite;
 }
 
-.brand-marquee:hover .brand-marquee-track {
+.brand-marquee:hover .brand-marquee-track,
+.brand-marquee:focus-within .brand-marquee-track,
+.brand-marquee-track.is-paused {
   animation-play-state: paused;
 }
 
@@ -130,3 +140,28 @@
   }
 }
 
+
+/* Accessibility: terracotta text on dark sections uses the lighter tone for AA contrast */
+.bg-ink .text-primary,
+.bg-ink .hover\:text-primary:hover {
+  color: var(--primary-soft);
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+  .bg-ink :focus-visible {
+    outline-color: var(--primary-soft);
+  }
+}
+
+/* Legal pages typography */
+.legal-prose { color: var(--foreground); line-height: 1.75; }
+.legal-prose h2 { font-family: var(--font-display); font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+.legal-prose p { margin-top: 0.75rem; color: var(--muted-foreground); }
+.legal-prose ul { margin-top: 0.75rem; padding-left: 1.25rem; list-style: disc; color: var(--muted-foreground); }
+.legal-prose li { margin-top: 0.35rem; }
+.legal-prose a { color: var(--primary); text-decoration: underline; text-underline-offset: 4px; }
+.legal-prose strong { color: var(--foreground); font-weight: 500; }

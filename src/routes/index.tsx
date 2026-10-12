@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import serviceCortinados from "@/assets/service-cortinados.jpg";
@@ -56,6 +57,7 @@ const PROCESS = [
 ] as const;
 
 function Home() {
+  const [paused, setPaused] = useState(false);
   return (
     <div>
       {/* Hero */}
@@ -106,25 +108,35 @@ function Home() {
         <p className="eyebrow mt-10 text-center text-muted-foreground">
           Trabalhamos com marcas de confiança
         </p>
-        <div className="relative mt-8 mb-10">
+        <div className="relative mt-8 mb-4">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent md:w-24" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent md:w-24" />
-          <div className="brand-marquee-track items-center">
+          <div className={`brand-marquee-track items-center ${paused ? "is-paused" : ""}`}>
             {[...BRANDS, ...BRANDS].map((brand, i) => (
               <div
                 key={`${brand.name}-${i}`}
+                aria-hidden={i >= BRANDS.length ? true : undefined}
                 className="mx-8 flex h-14 w-36 shrink-0 items-center justify-center md:mx-10 md:h-16 md:w-44"
               >
                 <img
                   src={brand.logo}
-                  alt={brand.name}
+                  alt={i >= BRANDS.length ? "" : `Logótipo da marca ${brand.name}`}
                   loading="lazy"
-                  aria-hidden={i >= BRANDS.length}
                   className="h-auto max-h-full w-auto max-w-full object-contain opacity-80 transition-opacity duration-300 hover:opacity-100"
                 />
               </div>
             ))}
           </div>
+        </div>
+        <div className="mb-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setPaused((p) => !p)}
+            aria-pressed={paused}
+            className="min-h-11 px-4 text-xs uppercase tracking-widest text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+          >
+            {paused ? "Retomar animação" : "Pausar animação"}
+          </button>
         </div>
       </section>
 
@@ -169,7 +181,7 @@ function Home() {
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
                     src={img}
-                    alt={service.label}
+                    alt={`Exemplo ilustrativo: ${service.label.toLowerCase()}`}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     width={1088}
@@ -220,12 +232,16 @@ function Home() {
           </Link>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[realProject1, realProject3, realProject6].map((img, i) => (
+          {[
+            { img: realProject1, alt: "Recanto de leitura com cortinados, cadeirão e candeeiro de pé em tons quentes" },
+            { img: realProject3, alt: "Quarto com tapete marcante e cortinados leves junto à janela" },
+            { img: realProject6, alt: "Sala de jantar com mesa de madeira, cadeiras e iluminação quente" },
+          ].map(({ img, alt }, i) => (
             <Link key={i} to="/portfolio" className="group block overflow-hidden bg-card">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src={img}
-                  alt="Projeto de decoração Casa & Tendências"
+                  alt={alt}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   width={1088}
