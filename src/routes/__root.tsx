@@ -128,12 +128,6 @@ function SiteHeader() {
         </nav>
         <div className="flex items-center gap-3">
           <a
-            href={PHONE_TEL}
-            className="hidden rounded-md border border-foreground/20 px-4 py-2 text-sm tracking-wide text-foreground transition-colors hover:border-primary hover:text-primary sm:inline-flex lg:hidden xl:inline-flex"
-          >
-            {PHONE_DISPLAY}
-          </a>
-          <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
