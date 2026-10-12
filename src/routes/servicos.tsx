@@ -8,6 +8,7 @@ import realProject6 from "@/assets/real-project-6.jpg";
 import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 
 export const Route = createFileRoute("/servicos")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Serviços · Casa & Tendências" },
@@ -23,8 +24,10 @@ export const Route = createFileRoute("/servicos")({
           "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores ao domicílio.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://casatendencias.lovable.app/servicos" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/servicos" }],
   }),
   component: ServicosPage,
 });

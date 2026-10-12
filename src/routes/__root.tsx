@@ -77,22 +77,12 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Casa & Tendências · Cortinados, Blackouts e Toldos · Papel de Parede e Consultoria ao Domicílio" },
-      {
-        name: "description",
-        content:
-          "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores ao domicílio, em Santo Tirso e arredores. Medição, aconselhamento e instalação em sua casa.",
-      },
-      { property: "og:title", content: "Casa & Tendências · Decoração ao Domicílio" },
-      {
-        property: "og:description",
-        content:
-          "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
-      },
+      { property: "og:site_name", content: "Casa & Tendências" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

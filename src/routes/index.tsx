@@ -11,9 +11,10 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES, BRANDS } from "@/lib/
 
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Casa & Tendências · Cortinados, Blackouts e Toldos · Papel de Parede e Consultoria ao Domicílio" },
+      { title: "Casa & Tendências · Decoração de Interiores ao Domicílio em Santo Tirso" },
       {
         name: "description",
         content:
@@ -26,8 +27,10 @@ export const Route = createFileRoute("/")({
           "Cortinados, blackouts e toldos à medida, papel de parede e consultoria de interiores. Vamos até sua casa para medir, aconselhar e instalar.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://casatendencias.lovable.app" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app" }],
   }),
   component: Home,
 });

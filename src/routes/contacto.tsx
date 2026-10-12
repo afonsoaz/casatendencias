@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, SERVICES } from "@/lib/brand";
 
 export const Route = createFileRoute("/contacto")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Contacto · Casa & Tendências" },
@@ -18,8 +19,10 @@ export const Route = createFileRoute("/contacto")({
         content: "Ligue, envie WhatsApp ou descreva o seu projeto. Atendimento ao domicílio.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://casatendencias.lovable.app/contacto" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/contacto" }],
   }),
   component: ContactoPage,
 });

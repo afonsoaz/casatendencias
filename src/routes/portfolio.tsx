@@ -8,6 +8,7 @@ import realProject6 from "@/assets/real-project-6.jpg";
 import { INSTAGRAM_URL } from "@/lib/brand";
 
 export const Route = createFileRoute("/portfolio")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Portefólio · Casa & Tendências" },
@@ -23,8 +24,10 @@ export const Route = createFileRoute("/portfolio")({
           "Transformações de interiores: cortinados, blackouts e toldos à medida, papel de parede e consultoria ao domicílio.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://casatendencias.lovable.app/portfolio" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://casatendencias.lovable.app/portfolio" }],
   }),
   component: PortfolioPage,
 });
