@@ -130,7 +130,7 @@ function PortfolioPage() {
           </a>
           <p className="mt-8 text-sm text-ink-foreground/60">
             Prefere falar connosco diretamente?{" "}
-            <Link to="/contacto" className="text-primary underline-offset-4 hover:underline">
+            <Link to="/contacto" className="text-primary underline underline-offset-4">
               Envie-nos o seu projeto
             </Link>
             .
