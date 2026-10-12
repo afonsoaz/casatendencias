@@ -131,7 +131,7 @@ function Home() {
         <p className="eyebrow mt-10 text-center text-muted-foreground">
           Trabalhamos com marcas de confiança
         </p>
-        <div className="relative mt-8 mb-4">
+        <div className="relative mt-8 mb-14">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent md:w-24" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent md:w-24" />
           <div className="brand-marquee-track items-center">
