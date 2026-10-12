@@ -1,4 +1,10 @@
 import { createServerFn } from '@tanstack/react-start'
+import { SERVICES } from '@/lib/brand'
+
+const SERVICE_LABELS: Record<string, string> = Object.fromEntries([
+  ...SERVICES.map((s) => [s.id, s.label] as const),
+  ['outros', 'Outros serviços'] as const,
+])
 
 export interface ContactSubmissionInput {
   name: string
