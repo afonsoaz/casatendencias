@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero.jpg";
-import serviceCortinados from "@/assets/service-cortinados.jpg";
-import servicePapelParede from "@/assets/service-papel-parede.jpg";
-import serviceConsultoria from "@/assets/service-consultoria.jpg";
+import heroImg from "@/assets/home-real-hero.jpg";
+import serviceCortinados from "@/assets/home-real-cortinados.jpg";
+import servicePapelParede from "@/assets/home-real-papel-parede.jpg";
+import serviceConsultoria from "@/assets/home-real-consultoria.jpg";
 import realProject1 from "@/assets/real-project-1.jpg";
 import realProject3 from "@/assets/real-project-3.jpg";
 import realProject6 from "@/assets/real-project-6.jpg";
@@ -62,7 +62,7 @@ function Home() {
       <section className="relative isolate overflow-hidden">
         <img
           src={heroImg}
-          alt="Sala com cortinados por medida em tons quentes"
+          alt="Quarto decorado pela Casa & Tendências com cortinados por medida"
           className="absolute inset-0 -z-10 h-full w-full object-cover"
           width={1920}
           height={1080}
@@ -160,6 +160,11 @@ function Home() {
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {SERVICES.map((service, i) => {
             const img = [serviceCortinados, servicePapelParede, serviceConsultoria][i];
+            const alt = [
+              "Recanto decorado pela Casa & Tendências com cortinados por medida",
+              "Papel de parede texturado aplicado num projeto Casa & Tendências",
+              "Sala de jantar coordenada pela consultoria de interiores Casa & Tendências",
+            ][i];
             return (
               <Link
                 key={service.id}
@@ -169,7 +174,7 @@ function Home() {
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
                     src={img}
-                    alt={service.label}
+                    alt={alt}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     width={1088}
