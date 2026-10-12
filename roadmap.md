@@ -1,7 +1,7 @@
 # Roadmap
 
 ## Open
-- [ ] Remove the "Pausar animação" button from the brand marquee on the home page (requested 2026-10-12)
+- (none)
 
 ## Waiting on user
 - [ ] Legal company details for the privacy, terms and cookies pages: legal company name, NIF, privacy contact email
