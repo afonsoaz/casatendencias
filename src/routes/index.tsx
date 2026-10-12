@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import serviceCortinados from "@/assets/service-cortinados.jpg";
@@ -57,7 +56,6 @@ const PROCESS = [
 ] as const;
 
 function Home() {
-  const [paused, setPaused] = useState(false);
   return (
     <div>
       {/* Hero */}
@@ -111,7 +109,7 @@ function Home() {
         <div className="relative mt-8 mb-4">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent md:w-24" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent md:w-24" />
-          <div className={`brand-marquee-track items-center ${paused ? "is-paused" : ""}`}>
+          <div className="brand-marquee-track items-center">
             {[...BRANDS, ...BRANDS].map((brand, i) => (
               <div
                 key={`${brand.name}-${i}`}
@@ -127,16 +125,6 @@ function Home() {
               </div>
             ))}
           </div>
-        </div>
-        <div className="mb-8 flex justify-center">
-          <button
-            type="button"
-            onClick={() => setPaused((p) => !p)}
-            aria-pressed={paused}
-            className="min-h-11 px-4 text-xs uppercase tracking-widest text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-          >
-            {paused ? "Retomar animação" : "Pausar animação"}
-          </button>
         </div>
       </section>
 
